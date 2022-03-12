@@ -1,0 +1,23 @@
+<div class="container text-light">
+    <h2 class="mb-5">Select Warriors</h2>
+    <form class="row g-3" action="/fight-arena/fight" method="POST">
+        <div class="container d-flex justify-content-evenly">
+            <select class="form-select w-25" aria-label="warr1" name="warr1">
+                <option selected>Select Warrior 1</option>
+                {{#each warriorsList}}
+                    <option value="{{this.id}}">{{this.name}} 🗡️{{this.power}} 🛡️{{this.defence}} 💪{{this.endurance}} 🖐️{{this.agility}}</option>
+                {{/each}}
+            </select>
+            <div class="p-2">VS</div>
+            <select class="form-select w-25" aria-label="warr2" name="warr2">
+                <option selected>Select Warrior 2</option>
+                {{#each warriorsList}}
+                    <option value="{{this.id}}">{{this.name}} 🗡️{{this.power}} 🛡️{{this.defence}} 💪{{this.endurance}} 🖐️{{this.agility}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="w-100 d-flex justify-content-center mt-5">
+            <button type="submit" class="btn btn-danger px-5 btn-lg">Begin the fight!</button>
+        </div>
+    </form>
+</div>

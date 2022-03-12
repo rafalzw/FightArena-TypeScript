@@ -1,0 +1,11 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "env": {
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb", "airbnb-typescript"],
+  "rules": {}
+}

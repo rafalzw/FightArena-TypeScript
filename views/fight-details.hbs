@@ -1,0 +1,37 @@
+<div class="container text-light">
+    <h2 class="text-center">Flow of the fight</h2>
+    <div class="d-flex justify-content-evenly mt-4">
+        <div class="card bg-dark h-100 opacity-75" style="width: 18rem;">
+            <img src="/img/{{#if (isFemale warrior1.name)}}woman.png{{else}}man.png{{/if}}" class="card-img-top">
+            <div class="card-body ">
+                <h5 class="card-title">{{warrior1.name}}</h5>
+                <ul class="list-group ">
+                    <li class="list-group-item">🗡️ Power: {{warrior1.power}}</li>
+                    <li class="list-group-item">🛡️ Defence: {{warrior1.defence}}</li>
+                    <li class="list-group-item">💪 Endurance: {{warrior1.endurance}}</li>
+                    <li class="list-group-item">🖐️ Agility: {{warrior1.agility}}</li>
+                </ul>
+            </div>
+        </div>
+        <table class="table table-dark table-striped table-bordered w-75 opacity-75">
+            <tbody>
+            {{#each fightDetails}}
+                <tr>
+                    <th scope="row">{{this}}</th>
+            {{/each}}
+            </tbody>
+        </table>
+        <div class="card d-flex bg-dark h-100 opacity-75" style="width: 18rem;">
+            <img src="/img/{{#if (isFemale warrior2.name)}}woman.png{{else}}man.png{{/if}}" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">{{warrior2.name}}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">🗡️ Power: {{warrior2.power}}</li>
+                    <li class="list-group-item">🛡️ Defence: {{warrior2.defence}}</li>
+                    <li class="list-group-item">💪 Endurance: {{warrior2.endurance}}</li>
+                    <li class="list-group-item">🖐️ Agility: {{warrior2.agility}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
